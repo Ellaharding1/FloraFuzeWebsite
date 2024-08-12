@@ -1,0 +1,268 @@
+body {
+    font-family: 'Great Vibes', cursive; /* Elegant cursive font */
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background3.jpg'); /* Adjust the path if needed */
+    background-size: cover; /* This will ensure the image covers the entire background */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+    background-position: center center; /* This centers the image */
+    background-attachment: fixed; /* This keeps the background image fixed in place */
+    color: #fff;
+}
+
+header {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px; /* Increase the font size here */
+    margin: 0; /* Remove default margin */
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-nav {
+    left: 10px;
+}
+
+.right-nav {
+    right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a img {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    transition: transform 0.3s;
+}
+
+nav ul li a img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+main {
+    padding: 20px;
+    margin-left: 160px; /* Increase margin to prevent overlap */
+    margin-right: 160px; /* Increase margin to prevent overlap */
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#home {
+    position: relative;
+    padding: 20px;
+}
+
+.home-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.about-us-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+#contact-us {
+    position: relative;
+    padding: 20px;
+}
+
+.contact-us-overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    color: #000;
+}
+
+#contact-us h2,
+#contact-us p,
+#contact-us label {
+    color: #000;
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-us form label {
+    margin-top: 10px;
+}
+
+#contact-us form input,
+#contact-us form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contact-us form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-us form button:hover {
+    background-color: #555;
+}
+
+#home h2,
+#home h3,
+#home p,
+#home h4,
+#about-us p,
+#about-us h2,
+#contact-us p,
+#contact-us h2,
+#contact-us form {
+    color: #000; /* Ensure all headings and paragraphs are black */
+}
+
+.featured-products {
+    display: flex;
+    justify-content: space-around; /* Adjusts space between items */
+    flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+    gap: 20px; /* Space between items */
+}
+
+.product {
+    text-align: center;
+    flex: 1; /* Ensures items are flexible */
+    min-width: 200px; /* Minimum width to keep items from getting too small */
+}
+
+.product img {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #444;
+}
+
+.product p {
+    font-size: 16px;
+    color: #666;
+}
+
+section#gallery {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section#gallery h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 100%; /* Use the full width of the container */
+    max-width: calc(100% - 50px); /* Ensure the image fits within the available space */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+footer {
+    background-color: rgba(205, 179, 162, 0.8); /* Adjust the last value (0.8) to control the transparency */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: auto;
+    bottom: 0;
+    width: 100%;
+}
+
+.badge {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
