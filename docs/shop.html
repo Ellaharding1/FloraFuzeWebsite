@@ -74,7 +74,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeCheckoutForm()">&times;</span>
             <h2>Checkout</h2>
-            <h2>Payment Instructions</h2>
+            <form id="checkoutForm" action="checkout.php" method="POST">
+                <h2>Payment Instructions</h2>
     <p>To complete your purchase, please send an Interac e-Transfer to the following email address:</p>
     <p><span class="highlight">Email:</span> your-email@example.com</p>
     <p><span class="highlight">Amount:</span> $50.00 CAD</p>
@@ -82,6 +83,7 @@
     <div class="order-number">Order Number: #123456</div>
     <p class="note">Once the e-transfer has been sent, please notify us by email at <span class="highlight">your-email@example.com</span>.</p>
     <p class="note">Your order will be processed once the payment has been received.</p>
+            </form>
         </div>
     </div>
 
