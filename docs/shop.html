@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Glass FloraFuze Creation</h1>
+        <h1>Glass FloraFuze Creations</h1>
     </header>
 
     <nav class="left-nav">
@@ -22,47 +22,25 @@
         <section id="store">
             <div class="store-container">
                 <div class="store-item">
-                    <img src="images/product1.jpg" alt="Product 1">
-                    <h3>Glass Vase</h3>
+                    <img src="images/product1.jpg" alt="Glass Vase - Product 1">
+                    <h3>Single Flowers</h3>
                     <p>Elegant handcrafted glass vase perfect for any home decor.</p>
-                    <p class="price">$50.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Glass Vase', 50)">Buy Now</button>
+                    <p class="price">$5.00</p>
+                    <button class="buy-now" onclick="openCheckoutForm('Glass Vase', 5)">Buy Now</button>
                 </div>
                 <div class="store-item">
-                    <img src="images/product2.jpg" alt="Product 2">
+                    <img src="images/product2.jpg" alt="Floral Arrangement - Product 2">
                     <h3>Floral Arrangement</h3>
                     <p>Beautiful floral arrangement made from high-quality glass.</p>
-                    <p class="price">$75.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Floral Arrangement', 75)">Buy Now</button>
+                    <p class="price">$20.00</p>
+                    <button class="buy-now" onclick="openCheckoutForm('Floral Arrangement', 20)">Buy Now</button>
                 </div>
                 <div class="store-item">
-                    <img src="images/product3.jpg" alt="Product 3">
+                    <img src="images/product3.jpg" alt="Jewelry Set - Product 3">
                     <h3>Jewelry Set</h3>
                     <p>Unique jewelry set to add elegance to any outfit.</p>
-                    <p class="price">$120.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Jewelry Set', 120)">Buy Now</button>
-                </div>
-
-                <div class="store-item">
-                    <img src="images/product1.jpg" alt="Product 1">
-                    <h3>Glass Vase</h3>
-                    <p>Elegant handcrafted glass vase perfect for any home decor.</p>
-                    <p class="price">$50.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Glass Vase', 50)">Buy Now</button>
-                </div>
-                <div class="store-item">
-                    <img src="images/product2.jpg" alt="Product 2">
-                    <h3>Floral Arrangement</h3>
-                    <p>Beautiful floral arrangement made from high-quality glass.</p>
-                    <p class="price">$75.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Floral Arrangement', 75)">Buy Now</button>
-                </div>
-                <div class="store-item">
-                    <img src="images/product3.jpg" alt="Product 3">
-                    <h3>Jewelry Set</h3>
-                    <p>Unique jewelry set to add elegance to any outfit.</p>
-                    <p class="price">$120.00</p>
-                    <button class="buy-now" onclick="openCheckoutForm('Jewelry Set', 120)">Buy Now</button>
+                    <p class="price">$10.00</p>
+                    <button class="buy-now" onclick="openCheckoutForm('Jewelry Set', 10)">Buy Now</button>
                 </div>
 
                 <!-- Add more products as needed -->
@@ -72,43 +50,119 @@
 
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeCheckoutForm()">&times;</span>
+            <span class="close" onclick="closeCheckoutForm()" aria-label="Close">&times;</span>
             <h2>Checkout</h2>
-            <form id="checkoutForm" action="checkout.php" method="POST">
+            <form id="checkoutForm">
                 <label for="product">Product:</label>
                 <input type="text" id="product" name="product" readonly>
                 
                 <label for="price">Price:</label>
                 <input type="text" id="price" name="price" readonly>
+    
+                <label for="payment-instructions">Payment Instructions:</label>
+                <p id="payment-instructions">
+                    Please complete your purchase by sending an e-transfer to 
+                    <strong>florafuze@gmail.com</strong>. 
+                    In the e-transfer notes, be sure to include:
+                </p>
+                <ul>
+                    <li>Your Name</li>
+                    <li>Your Email Address</li>
+                    <li>Product Name</li>
+                    <li>Total Price</li>
+                    <li>Shipping Address</li>
+                </ul>
+                <p>We will confirm your order via email once the payment is received.</p>
                 
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="address">Shipping Address:</label>
-                <textarea id="address" name="address" rows="4" required></textarea>
-                
-                <button type="submit">Complete Purchase</button>
+                <button type="submit" id="submitBtn">Complete Purchase</button>
             </form>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Glass Bloom Creations</p>
-    </footer>
-
     <script>
         function openCheckoutForm(product, price) {
             document.getElementById('product').value = product;
-            document.getElementById('price').value = '$' + price.toFixed(2);
+            document.getElementById('price').value = `$${price}.00`;
+            document.getElementById('checkoutModal').style.display = 'block';
+    
+            // Store the reference to the product button for later use
+            document.getElementById('checkoutForm').dataset.productId = product;
+        }
+    
+        function closeCheckoutForm() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
+    
+        function openThankYouModal() {
+            document.getElementById('thankYouModal').style.display = 'block';
+        }
+    
+        function closeThankYouModal() {
+            document.getElementById('thankYouModal').style.display = 'none';
+        }
+    
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            var checkoutModal = document.getElementById('checkoutModal');
+            var thankYouModal = document.getElementById('thankYouModal');
+            if (event.target == checkoutModal) {
+                checkoutModal.style.display = 'none';
+            } else if (event.target == thankYouModal) {
+                thankYouModal.style.display = 'none';
+            }
+        }
+    
+        // Handle form submission to close the checkout modal and open the thank-you modal
+        document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            closeCheckoutForm(); // Close the checkout modal
+            openThankYouModal(); // Open the thank-you modal
+    
+            // Optionally, reset the form for the next purchase
+            document.getElementById('checkoutForm').reset();
+        });
+    </script>
+    
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Thank you for your purchase! Your order has been received and is being processed.</p>
+            <button onclick="closeThankYouModal()">Close</button>
+        </div>
+    </div>
+    
+    
+    
+    
+
+    
+
+    <footer>
+        <p>&copy; 2024 Glass FloraFuze Creations</p>
+    </footer>
+
+    <script>
+        // JavaScript for modal functionality
+        function openCheckoutForm(product, price) {
+            document.getElementById('product').value = product;
+            document.getElementById('price').value = `$${price}.00`;
             document.getElementById('checkoutModal').style.display = 'block';
         }
 
         function closeCheckoutForm() {
             document.getElementById('checkoutModal').style.display = 'none';
         }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById('checkoutModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
+
 </body>
 </html>
+
