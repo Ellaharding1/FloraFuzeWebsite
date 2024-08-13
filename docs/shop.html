@@ -22,26 +22,70 @@
         <section id="store">
             <div class="store-container">
                 <div class="store-item">
-                    <img src="images/product1.jpg" alt="Glass Vase - Product 1">
+                    <div class="scrollable-images">
+                        <img src="images/YellowFlowerSingle.JPG" alt="Glass Vase - Product 1">
+                        <!-- Add more images as needed -->
+                    </div>
                     <h3>Single Flowers</h3>
                     <p>Elegant handcrafted glass vase perfect for any home decor.</p>
                     <p class="price">$5.00</p>
                     <button class="buy-now" onclick="openCheckoutForm('Glass Vase', 5)">Buy Now</button>
                 </div>
+
+                
+
                 <div class="store-item">
-                    <img src="images/product2.jpg" alt="Floral Arrangement - Product 2">
+                    <div class="scrollable-images">
+                        <img src="images/RedFlowers1.JPG" alt="Glass Vase - Product 1">
+                        <img src="images/RedFlowers3.JPG" alt="Glass Vase - Product 3">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <h3>Single Flowers</h3>
+                    <p>Elegant handcrafted glass vase perfect for any home decor.</p>
+                    <p class="price">$5.00</p>
+                    <button class="buy-now" onclick="openCheckoutForm('Glass Vase', 5)">Buy Now</button>
+                </div>
+
+                <div class="store-item">
+                    <div class="scrollable-images">
+                        <img src="images/yellowFlower2.JPG" alt="Glass Vase - Product 2">
+                        <img src="images/YellowFlower1.JPG" alt="Glass Vase - Product 3">
+                        <!-- Add more images as needed -->
+                    </div>
                     <h3>Floral Arrangement</h3>
                     <p>Beautiful floral arrangement made from high-quality glass.</p>
                     <p class="price">$20.00</p>
                     <button class="buy-now" onclick="openCheckoutForm('Floral Arrangement', 20)">Buy Now</button>
                 </div>
+
                 <div class="store-item">
-                    <img src="images/product3.jpg" alt="Jewelry Set - Product 3">
+                    <div class="scrollable-images">
+                        <img src="images/vasepicture4.JPG" alt="Glass Vase - Product 2">
+                        <img src="images/VasePictures2.JPG" alt="Glass Vase - Product 3">
+                        <img src="images/VasePicture5.JPG" alt="Glass Vase - Product 3">
+                        <img src="images/VasePicture3.JPG" alt="Glass Vase - Product 3">
+
+                        <!-- Add more images as needed -->
+                    </div>
+                    <h3>Floral Arrangement</h3>
+                    <p>Beautiful floral arrangement made from high-quality glass.</p>
+                    <p class="price">$20.00</p>
+                    <button class="buy-now" onclick="openCheckoutForm('Floral Arrangement', 20)">Buy Now</button>
+                </div>
+
+
+
+                <div class="store-item">
+                    <div class="scrollable-images">
+                        <img src="images/flower2.jpeg" alt="Glass Vase - Product 1">
+                        <!-- Add more images as needed -->
+                    </div>
                     <h3>Jewelry Set</h3>
                     <p>Unique jewelry set to add elegance to any outfit.</p>
                     <p class="price">$10.00</p>
                     <button class="buy-now" onclick="openCheckoutForm('Jewelry Set', 10)">Buy Now</button>
                 </div>
+
 
                 <!-- Add more products as needed -->
             </div>
@@ -50,14 +94,26 @@
 
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeCheckoutForm()" aria-label="Close">&times;</span>
+            <span class="close" onclick="closeCheckoutForm()">&times;</span>
             <h2>Checkout</h2>
+
+
             <form id="checkoutForm">
                 <label for="product">Product:</label>
                 <input type="text" id="product" name="product" readonly>
                 
                 <label for="price">Price:</label>
                 <input type="text" id="price" name="price" readonly>
+
+                
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
     
                 <label for="payment-instructions">Payment Instructions:</label>
                 <p id="payment-instructions">
@@ -73,11 +129,13 @@
                     <li>Shipping Address</li>
                 </ul>
                 <p>We will confirm your order via email once the payment is received.</p>
-                
-                <button type="submit" id="submitBtn">Complete Purchase</button>
+    
+                <button type="submit">Complete Purchase</button>
             </form>
+
         </div>
     </div>
+    
 
     <script>
         function openCheckoutForm(product, price) {

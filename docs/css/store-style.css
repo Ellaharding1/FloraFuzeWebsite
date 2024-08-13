@@ -80,13 +80,14 @@ section {
 }
 
 .store-item {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     padding: 20px;
-    max-width: 300px;
+    max-width: 400px; /* Increased width of the store item */
+    margin: 20px auto; /* Center the item with some margin */
 }
 
 .store-item img {
@@ -197,4 +198,53 @@ footer {
 
 #checkoutForm button:hover {
     background-color: #555;
+}
+
+
+.transfer-guide {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.etransfer-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.store-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.scrollable-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px; /* Increase the space between images */
+    padding: 15px 0; /* Increase padding above and below the images */
+    margin-bottom: 20px; /* Increase space below the scrollable section */
+}
+
+.scrollable-images::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollable-images::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scrollable-images img {
+    max-height: 150px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
