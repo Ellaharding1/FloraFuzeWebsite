@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Instructions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: 500;
+            color: #007BFF;
+        }
+
+        .order-number {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="payment-container">
+    <h2>Payment Instructions</h2>
+    <p>To complete your purchase, please send an Interac e-Transfer to the following email address:</p>
+    <p><span class="highlight">Email:</span> your-email@example.com</p>
+    <p><span class="highlight">Amount:</span> $50.00 CAD</p>
+    <p><span class="highlight">Message/Order Number:</span> Please include your order number in the message field.</p>
+    <div class="order-number">Order Number: #123456</div>
+    <p class="note">Once the e-transfer has been sent, please notify us by email at <span class="highlight">your-email@example.com</span>.</p>
+    <p class="note">Your order will be processed once the payment has been received.</p>
+</div>
+
+</body>
+</html>
