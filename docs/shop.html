@@ -9,22 +9,6 @@
 
 
 
-    <style>
-        /* Make the Stripe Buy Button responsive  */
-        stripe-buy-button {
-          display: block;
-          width: 50%; /* Makes the button take up 100% of its container's width */
-          max-width: 300px; /* You can set a max width to prevent it from getting too large */
-          /*margin: 0 auto;  Centers the button horizontally */
-        }
-      
-        @media (max-width: 600px) {
-          stripe-buy-button {
-            max-width: 50%; /* On smaller screens, allow the button to be as wide as the screen */
-          }
-        }
-      </style>
-    
     <!-- Stripe Buy Button Script -->
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
@@ -47,17 +31,21 @@
                         <img src="images/YellowFlowerSingle.JPG" alt="Glass Vase - Product 1">
                         <!-- Add more images as needed -->
                     </div>
-
+                
                     <h3>Single Yellow Flower</h3>
                     <p class="price">$7.00</p>
-                    <p>Elegant handcrafted glass vase perfect for any home decor.</p>
-
+                    <p>Elegant handcrafted glass flower perfect for any home decor.</p>
+                
                     <!-- Stripe Buy Button -->
-                    <stripe-buy-button
-                        buy-button-id="buy_btn_1PqdO2001Mc6lZIDS9E1khm7"
-                        publishable-key="pk_live_51Pqchh001Mc6lZIDZu6tiNPKs0dOxXETJwy44vh3GC2fgheKwNUnbeY13rMtOuJHEUyrnjukGJcjse4FWm3he6Dz00puFksONU">
-                    </stripe-buy-button>
+                    <div class="buy-container">
+
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1PqdO2001Mc6lZIDS9E1khm7"
+                            publishable-key="pk_live_51Pqchh001Mc6lZIDZu6tiNPKs0dOxXETJwy44vh3GC2fgheKwNUnbeY13rMtOuJHEUyrnjukGJcjse4FWm3he6Dz00puFksONU">
+                        </stripe-buy-button>
+                    </div>
                 </div>
+                
 
                 <div class="store-item">
                     <div class="scrollable-images">
@@ -65,10 +53,17 @@
                         <img src="images/RedFlowers3.JPG" alt="Glass Vase - Product 3">
                         <!-- Add more images as needed -->
                     </div>
-                    <h3>Single Flowers</h3>
-                    <p>Elegant handcrafted glass vase perfect for any home decor.</p>
-                    <p class="price">$5.00</p>
-                    <!-- You can add another Stripe Buy Button here for this product -->
+                    <h3>Three Red Flowers</h3>
+                    <p class="price">$15.00</p>
+                    <p>Elegant handcrafted glass flower perfect for any home decor.</p>
+
+                    <div class="buy-container">
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1Pr5qF001Mc6lZIDqUJjsf56"
+                            publishable-key="pk_live_51Pqchh001Mc6lZIDZu6tiNPKs0dOxXETJwy44vh3GC2fgheKwNUnbeY13rMtOuJHEUyrnjukGJcjse4FWm3he6Dz00puFksONU">
+                        </stripe-buy-button>
+                    </div>
+ 
                 </div>
 
                 <div class="store-item">
@@ -77,9 +72,16 @@
                         <img src="images/yellowFlower1.JPG" alt="Glass Vase - Product 3">
                         <!-- Add more images as needed -->
                     </div>
-                    <h3>Floral Arrangement</h3>
+                    <h3>Yellow Floral Arrangement</h3>
+                    <p class="price">$15.00</p>
                     <p>Beautiful floral arrangement made from high-quality glass.</p>
-                    <p class="price">$20.00</p>
+                    
+                    <div class="buy-container">
+                        <stripe-buy-button
+                        buy-button-id="buy_btn_1Pr6LJ001Mc6lZIDs1xhTOJB"
+                        publishable-key="pk_live_51Pqchh001Mc6lZIDZu6tiNPKs0dOxXETJwy44vh3GC2fgheKwNUnbeY13rMtOuJHEUyrnjukGJcjse4FWm3he6Dz00puFksONU"
+                        ></stripe-buy-button>
+                    </div>
                     <!-- You can add another Stripe Buy Button here for this product -->
                 </div>
 
@@ -91,22 +93,29 @@
                         <img src="images/VasePicture3.JPG" alt="Glass Vase - Product 3">
                         <!-- Add more images as needed -->
                     </div>
-                    <h3>Floral Arrangement</h3>
+                    <h3>Blue and Red Floral Arrangement</h3>
+                    <p class="price">$30.00</p>
                     <p>Beautiful floral arrangement made from high-quality glass.</p>
-                    <p class="price">$20.00</p>
+                    <div class="buy-container">
+                        <stripe-buy-button
+                        buy-button-id="buy_btn_1Pr6sM001Mc6lZIDqeNFIKq8"
+                        publishable-key="pk_live_51Pqchh001Mc6lZIDZu6tiNPKs0dOxXETJwy44vh3GC2fgheKwNUnbeY13rMtOuJHEUyrnjukGJcjse4FWm3he6Dz00puFksONU"
+                        ></stripe-buy-button>
+                    </div>
                     <!-- You can add another Stripe Buy Button here for this product -->
                 </div>
 
+
+                <!-- 
                 <div class="store-item">
                     <div class="scrollable-images">
                         <img src="images/flower2.jpeg" alt="Glass Vase - Product 1">
-                        <!-- Add more images as needed -->
                     </div>
                     <h3>Jewelry Set</h3>
                     <p>Unique jewelry set to add elegance to any outfit.</p>
                     <p class="price">$10.00</p>
-                    <!-- You can add another Stripe Buy Button here for this product -->
-                </div>
+                </div>-->
+
             </div>
         </section>
     </main>

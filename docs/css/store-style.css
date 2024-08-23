@@ -80,7 +80,7 @@ section {
 }
 
 .store-item {
-    background-color: rgba(169, 64, 64, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -94,7 +94,10 @@ section {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 10px; /* Add space between the image and the text below */
 }
+
+
 
 .store-item h3 {
     font-size: 24px;
@@ -113,18 +116,6 @@ section {
     margin: 10px 0;
 }
 
-.buy-now {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.buy-now:hover {
-    background-color: #555;
-}
 
 footer {
     background-color: rgba(205, 179, 162, 0.8); /* Keeps the footer semi-transparent */
@@ -172,48 +163,6 @@ footer {
     cursor: pointer;
 }
 
-#checkoutForm label {
-    display: block;
-    margin-top: 10px;
-}
-
-#checkoutForm input,
-#checkoutForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #090606;
-    border-radius: 5px;
-}
-
-#checkoutForm button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-#checkoutForm button:hover {
-    background-color: #555;
-}
-
-
-.transfer-guide {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.etransfer-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 
 .store-item {
     background-color: rgba(255, 255, 255, 0.9);
@@ -221,7 +170,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     max-width: 300px;
 }
 
@@ -248,3 +197,75 @@ footer {
     flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.buy-container {
+    text-align: center; /* Center the container */
+    width: 100%; /* Ensure the container takes up full width */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+
+
+@media (max-width: 600px) {
+    .buy-container stripe-buy-button {
+        max-width: 150vw; /* Adjust the max-width for smaller screens */
+    }
+}
+
+.store-item h3 {
+    font-size: 2vw; /* Responsive font size based on viewport width */
+    margin-top: 10px;
+    color: #444;
+}
+
+.store-item p {
+    font-size: 1.5vw; /* Responsive font size for paragraphs */
+    color: #666;
+}
+
+.price {
+    font-size: 1.8vw; /* Responsive font size for price */
+    color: #444;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .store-item h3 {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .store-item p,
+    .price {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* Responsive Title */
+header h1 {
+    font-size: 5vw; /* Make the title responsive */
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Responsive Home Image */
+nav ul li a img {
+    width: 20vw; /* Make the home image responsive */
+    height: auto; /* Keep aspect ratio */
+    max-width: 150px; /* Set a maximum width */
+    transition: transform 0.3s;
+}
+
+@media (max-width: 600px) {
+    nav ul li a img {
+        width: 40vw; /* Adjust image size for smaller screens */
+        max-width: 100px; /* Set a smaller max-width for mobile */
+    }
+}
+
