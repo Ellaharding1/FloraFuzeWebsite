@@ -17,10 +17,10 @@
     }
 
     body {
-      font-family: 'Great Vibes', cursive; /* Elegant cursive font */
+      font-family: 'Great Vibes', cursive;
       margin: 0;
       padding: 0;
-      background-image: url('images/background3.jpg'); /* Adjust the path if needed */
+      background-image: url('images/background3.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -75,8 +75,8 @@
 
     main {
       padding: 20px;
-      margin-left: 170px; /* Ensure space for the left nav */
-      margin-right: 170px; /* Ensure space for the right nav */
+      margin-left: 170px;
+      margin-right: 170px;
       line-height: 1.6;
     }
 
@@ -85,7 +85,7 @@
       width: 100%;
       margin: 50px auto;
       position: relative;
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -145,6 +145,13 @@
       bottom: 0;
       width: 100%;
     }
+
+    .success-message {
+      color: black;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -176,6 +183,12 @@
           <button type="submit" name="send" id="contact-submit">Submit Now</button>
         </fieldset>
       </form>
+      <!-- Success message -->
+      <?php
+      if (isset($_GET['status']) && $_GET['status'] == 'success') {
+        echo '<p class="success-message">Your email has been sent successfully!</p>';
+      }
+      ?>
     </div>
   </main>
 
